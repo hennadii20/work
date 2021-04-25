@@ -1,28 +1,16 @@
 //              Toggle menu
 
-const buttonToggle = document.querySelector("#dropdown-btn");
-const dropdownMenu = document.querySelector(".dropdown-menu");
+    $('.navigation__btn-burger').click(function (event) {
+        $('.dropdown-menu, .header-svg, .header-wrapper-menu, .header-active').css("visibility", "visible");
 
-function toggleDropdown (){
-    if (buttonToggle.classList.contains("show")){
-        buttonToggle.classList.remove("show"); 
-    }else{
-        buttonToggle.classList.add("show");
-    }
-    if (dropdownMenu.classList.contains("show")){
-        dropdownMenu.classList.remove("show");
-    }else{
-        dropdownMenu.classList.add("show");
-    }
-}
+        $('.navigation__btn-burger, .header-title').css("visibility", "hidden");
+    });
 
-function closeMenu(){
-    buttonToggle.classList.remove("show");
-    dropdownMenu.classList.remove("show");
-} 
-dropdownMenu.addEventListener("mouseup", closeMenu);
-dropdownMenu.addEventListener("mouseleave", closeMenu);
-buttonToggle.addEventListener("click", toggleDropdown);
+    $('.header-svg, .menu-item-link').click(function (event) {
+        $('.dropdown-menu, .header-svg, .header-active').css("visibility", "hidden");
+
+        $('.navigation__btn-burger, .header-title').css("visibility", "visible");
+    });
 
 $(".recent-works-slider").slick({
     lazyLoad: 'ondemand',
