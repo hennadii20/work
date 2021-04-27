@@ -1,16 +1,15 @@
 //              Toggle menu
 
-    $('.navigation__btn-burger').click(function (event) {
-        $('.dropdown-menu, .header-svg, .header-wrapper-menu, .header-active').css("visibility", "visible");
+$('.navigation-item').click(function (event) {
+    $('.navigation-btn-burger').toggleClass('show');
+    $('.header-menu-items').toggleClass('hidden');
+});
 
-        $('.navigation__btn-burger, .header-title').css("visibility", "hidden");
-    });
+$('.header-link').click(function (event) {
+    $('.header-menu-items').toggleClass('hidden');
+    $('.navigation-btn-burger').toggleClass('show');
+});
 
-    $('.header-svg, .menu-item-link').click(function (event) {
-        $('.dropdown-menu, .header-svg, .header-active').css("visibility", "hidden");
-
-        $('.navigation__btn-burger, .header-title').css("visibility", "visible");
-    });
 
 $(".recent-works-slider").slick({
     lazyLoad: 'ondemand',
