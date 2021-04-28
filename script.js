@@ -1,5 +1,3 @@
-//              Toggle menu
-
 $('.navigation-item').click(function (event) {
     $('.navigation-btn-burger').toggleClass('show');
     $('.header-menu-items').toggleClass('hidden');
@@ -9,7 +7,6 @@ $('.header-link').click(function (event) {
     $('.header-menu-items').toggleClass('hidden');
     $('.navigation-btn-burger').toggleClass('show');
 });
-
 
 $(".recent-works-slider").slick({
     lazyLoad: 'ondemand',
@@ -25,16 +22,27 @@ $(".recent-works-slider").slick({
     focusOnSelect: true,
     infinite: true,
     responsive: [
+
         {
-             breakpoint: 768,
+            breakpoint: 992,
+           settings: {
+           slidesToShow: 1,
+           }
+       },
+        {
+            breakpoint: 768,
+            settings: {
+            slidesToShow: 1,
+            }
+        },
+        {
+            breakpoint: 576,
             settings: {
             slidesToShow: 1,
             }
         },
     ]
 });
-
-
 
 $(".slider").slick({
     lazyLoad: 'ondemand',
